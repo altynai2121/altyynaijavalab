@@ -1,0 +1,10 @@
+config:
+  target: 'http://localhost:8080'  # Это адрес твоего приложения
+  phases:
+    - duration: 60  # Продолжительность теста в секундах
+      arrivalRate: 20  # Количество запросов в секунду
+
+scenarios:
+  - flow:
+      - get:
+          url: "/mvc/hello"  # Это URL, к которому будет происходить запрос
